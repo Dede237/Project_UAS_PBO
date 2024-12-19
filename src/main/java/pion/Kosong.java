@@ -5,4 +5,8 @@ public class Kosong extends Pion {
         super(baris, kolom, putih);
         setTampilan("..");
     }
+
+    public boolean validasi1() {
+        return true;
+    }
 }

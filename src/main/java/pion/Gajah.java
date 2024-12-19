@@ -9,4 +9,15 @@ public class Gajah extends Pion{
             setTampilan("gh");
         }
     }
+
+    public boolean validasi1(int baris, int kolom, int barisTujuan, int kolomTujuan) {
+        int selisihBaris = Math.abs(barisTujuan - baris);
+        int selisihKolom = Math.abs(kolomTujuan - kolom);
+
+        if (selisihBaris == selisihKolom) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
