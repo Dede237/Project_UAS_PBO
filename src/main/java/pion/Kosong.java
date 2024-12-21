@@ -6,7 +6,7 @@ public class Kosong extends Pion {
         setTampilan("..");
     }
 
-    public boolean validasi1() {
+    public boolean validasi1(int baris, int kolom, int barisTujuan, int kolomTujuan) {
         return true;
     }
 }

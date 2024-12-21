@@ -25,5 +25,8 @@ public final class App {
         papan.getPion(baris, kolom).bergerak(papan, barisTujuan, kolomTujuan);
 
         papan.menampilkanPapan();
+        
     }
+
+    
 }
