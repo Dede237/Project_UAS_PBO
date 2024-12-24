@@ -1,16 +1,18 @@
 package pion;
 
+import papan.Papan;
+
 public class Gajah extends Pion{
-    public Gajah(int baris, int kolom, boolean putih) {
-        super(baris, kolom, putih);
-        if (putih) {
+    public Gajah(int baris, int kolom, boolean warna) {
+        super(baris, kolom, warna);
+        if (warna) {
             setTampilan("gp");
         } else {
             setTampilan("gh");
         }
     }
 
-    public boolean validasi1(int baris, int kolom, int barisTujuan, int kolomTujuan) {
+    public boolean validasi1(int baris, int kolom, int barisTujuan, int kolomTujuan, Papan papan) {
         int selisihBaris = Math.abs(barisTujuan - baris);
         int selisihKolom = Math.abs(kolomTujuan - kolom);
 

@@ -15,8 +15,8 @@ public class Papan {
     public Papan() {
         papan = new Pion[8][8];
         mengisiPapan();
-        menambahPionPutih();
-        menambahPionHitam();
+        mengisiPionPutih();
+        mengisiPionHitam();
     }
 
     public Pion getPion(int baris, int kolom) {
@@ -31,7 +31,7 @@ public class Papan {
         }
     }
 
-    private void menambahPionPutih() {
+    private void mengisiPionPutih() {
         papan[7][0] = new Benteng(7, 0, true);
         papan[7][1] = new Kuda(7, 1, true);
         papan[7][2] = new Gajah(7, 2, true);
@@ -46,7 +46,7 @@ public class Papan {
         }
     }
 
-    private void menambahPionHitam() {
+    private void mengisiPionHitam() {
         papan[0][0] = new Benteng(0, 0, false);
         papan[0][1] = new Kuda(0, 1, false);
         papan[0][2] = new Gajah(0, 2, false);
