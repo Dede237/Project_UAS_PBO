@@ -11,7 +11,7 @@ public abstract class Pion {
     public Pion(int baris, int kolom, boolean warna) {
         this.baris = baris;
         this.kolom = kolom;
-        this.tampilan = "";
+        this.warna = warna;
     }
 
     public void setBaris(int baris) {

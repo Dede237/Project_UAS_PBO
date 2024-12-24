@@ -12,6 +12,7 @@ public final class App {
         Scanner sc = new Scanner(System.in);
         Papan papan = new Papan();
 
+
         papan.menampilkanPapan();
         System.out.print("Masukkan baris: ");
         int baris = sc.nextInt();
