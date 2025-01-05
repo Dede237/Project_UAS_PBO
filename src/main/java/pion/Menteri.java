@@ -15,6 +15,7 @@ public class Menteri extends Pion{
     public boolean validasi1(int baris, int kolom, int barisTujuan, int kolomTujuan, Papan papan) {
         int selisihBaris = Math.abs(barisTujuan - baris);
         int selisihKolom = Math.abs(kolomTujuan - kolom);
+
         if (selisihBaris == selisihKolom) {
             return true;
         } else if (selisihBaris == 0 && selisihKolom != 0) {

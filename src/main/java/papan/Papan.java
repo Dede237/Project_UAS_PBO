@@ -35,7 +35,7 @@ public class Papan {
         papan[7][0] = new Benteng(7, 0, "putih");
         papan[7][1] = new Kuda(7, 1, "putih");
         papan[7][2] = new Gajah(7, 2, "putih");
-        papan[7][3] = new Menteri(0, 0, "putih");
+        papan[7][3] = new Menteri(7, 3, "putih");
         papan[7][4] = new Raja(7, 4, "putih");
         papan[7][5] = new Gajah(7, 5, "putih");
         papan[7][6] = new Kuda(7, 6, "putih");
@@ -50,7 +50,7 @@ public class Papan {
         papan[0][0] = new Benteng(0, 0, "hitam");
         papan[0][1] = new Kuda(0, 1, "hitam");
         papan[0][2] = new Gajah(0, 2, "hitam");
-        papan[0][3] = new Menteri(0, 0, "hitam");
+        papan[0][3] = new Menteri(0, 3, "hitam");
         papan[0][4] = new Raja(0, 4, "hitam");
         papan[0][5] = new Gajah(0, 5, "hitam");
         papan[0][6] = new Kuda(0, 6, "hitam");
@@ -77,5 +77,27 @@ public class Papan {
         papan[barisTujuan][kolomTujuan].setBaris(barisTujuan);
         papan[barisTujuan][kolomTujuan].setKolom(kolomTujuan);
         papan[baris][kolom] = new Kosong(baris, kolom, "kosong");
+    }
+
+    public boolean mengecekRajaPutih() {
+        for (int i = 0; i < papan.length; i++) {
+            for (int j = 0; j < papan[0].length; j++) {
+                if (getPion(i, j).getTampilan().equals("rp")) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public boolean mengecekRajaHitam() {
+        for (int i = 0; i < papan.length; i++) {
+            for (int j = 0; j < papan[0].length; j++) {
+                if (getPion(i, j).getTampilan().equals("rh")) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }

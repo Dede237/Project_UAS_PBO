@@ -49,10 +49,6 @@ public abstract class Pion {
     public abstract boolean validasi1(int baris, int kolom, int barisTujuan, int kolomTujuan, Papan papan);
 
     public void bergerak(Papan papan, int barisTujuan, int kolomTujuan) {
-        if (validasi1(baris, kolom, barisTujuan, kolomTujuan, papan)) {
-            papan.merubahPosisi(baris, kolom, barisTujuan, kolomTujuan);
-        } else {
-            System.out.println("Posisi Tidak Valid");
-        }
+        papan.merubahPosisi(baris, kolom, barisTujuan, kolomTujuan);
     }
 }
