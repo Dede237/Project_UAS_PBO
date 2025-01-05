@@ -3,9 +3,9 @@ package pion;
 import papan.Papan;
 
 public class Prajurit extends Pion{
-    public Prajurit(int baris, int kolom, boolean warna) {
+    public Prajurit(int baris, int kolom, String warna) {
         super(baris, kolom, warna);
-        if (warna) {
+        if (warna.equals("putih")) {
             setTampilan("pp");
         } else {
             setTampilan("ph");
@@ -16,28 +16,26 @@ public class Prajurit extends Pion{
         int selisihBaris = barisTujuan - baris;
         int selisihKolom = kolomTujuan - kolom;
 
-        if (isWarna()) {
-            System.out.println("test");
+        if (getWarna().equals("putih")) {
             if (baris == 6 && selisihBaris == -2 && selisihKolom == 0) {
                 return true;
             } else if (selisihBaris == -1 && selisihKolom == 0) {
                 return true;
-            } else if (!papan.getPion(barisTujuan, kolomTujuan).isWarna() && selisihBaris == -1 && selisihKolom == 1) {
+            } else if (papan.getPion(barisTujuan, kolomTujuan).getWarna().equals("hitam") && selisihBaris == -1 && selisihKolom == 1) {
                 return true;
-            } else if (!papan.getPion(barisTujuan, kolomTujuan).isWarna() && selisihBaris == - 1 && selisihKolom == -1) {
+            } else if (papan.getPion(barisTujuan, kolomTujuan).getWarna().equals("hitam") && selisihBaris == - 1 && selisihKolom == -1) {
                 return true;
             } else {
                 return false;
             }
-        } else if (!isWarna()) {
-            System.out.println("Test hitam");
+        } else if (getWarna().equals("hitam")) {
             if (baris == 1 && selisihBaris == 2 && selisihKolom == 0) {
                 return true;
             } else if (selisihBaris == 1 && selisihKolom == 0) {
                 return true;
-            } else if (papan.getPion(barisTujuan, kolomTujuan).isWarna() && selisihBaris == 1 && selisihKolom == 1) {
+            } else if (papan.getPion(barisTujuan, kolomTujuan).getWarna().equals("putih") && selisihBaris == 1 && selisihKolom == 1) {
                 return true;
-            } else if (papan.getPion(barisTujuan, kolomTujuan).isWarna() && selisihBaris == 1 && selisihKolom == -1) {
+            } else if (papan.getPion(barisTujuan, kolomTujuan).getWarna().equals("putih") && selisihBaris == 1 && selisihKolom == -1) {
                 return true;
             } else {
                 return false;

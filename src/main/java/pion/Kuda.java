@@ -3,9 +3,9 @@ package pion;
 import papan.Papan;
 
 public class Kuda extends Pion{
-    public Kuda(int baris, int kolom, boolean warna) {
+    public Kuda(int baris, int kolom, String warna) {
         super(baris, kolom, warna);
-        if (warna) {
+        if (warna.equals("putih")) {
             setTampilan("kp");
         } else {
             setTampilan("kh");

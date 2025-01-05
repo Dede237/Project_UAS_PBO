@@ -3,7 +3,7 @@ package pion;
 import papan.Papan;
 
 public class Kosong extends Pion {
-    public Kosong(int baris, int kolom, boolean warna) {
+    public Kosong(int baris, int kolom, String warna) {
         super(baris, kolom, warna);
         setTampilan("..");
     }

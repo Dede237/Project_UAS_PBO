@@ -3,9 +3,9 @@ package pion;
 import papan.Papan;
 
 public class Gajah extends Pion{
-    public Gajah(int baris, int kolom, boolean warna) {
+    public Gajah(int baris, int kolom, String warna) {
         super(baris, kolom, warna);
-        if (warna) {
+        if (warna.equals("putih")) {
             setTampilan("gp");
         } else {
             setTampilan("gh");

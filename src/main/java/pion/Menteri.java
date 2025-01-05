@@ -3,9 +3,9 @@ package pion;
 import papan.Papan;
 
 public class Menteri extends Pion{
-    public Menteri(int baris, int kolom, boolean warna) {
+    public Menteri(int baris, int kolom, String warna) {
         super(baris, kolom, warna);
-        if (warna) {
+        if (warna.equals("putih")) {
             setTampilan("mp");
         } else {
             setTampilan("mh");

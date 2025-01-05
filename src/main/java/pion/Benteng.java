@@ -3,9 +3,9 @@ package pion;
 import papan.Papan;
 
 public class Benteng extends Pion{
-    public Benteng(int baris, int kolom, boolean warna) {
+    public Benteng(int baris, int kolom, String warna) {
         super(baris, kolom, warna);
-        if (warna) {
+        if (warna.equals("putih")) {
             setTampilan("bp");
         } else {
             setTampilan("bh");

@@ -26,38 +26,38 @@ public class Papan {
     private void mengisiPapan() {
         for (int i = 0; i < papan.length; i++) {
             for (int j = 0; j < papan[0].length; j++) {
-                papan[i][j] = new Kosong(i, j, true);
+                papan[i][j] = new Kosong(i, j, "kosong");
             }
         }
     }
 
     private void mengisiPionPutih() {
-        papan[7][0] = new Benteng(7, 0, true);
-        papan[7][1] = new Kuda(7, 1, true);
-        papan[7][2] = new Gajah(7, 2, true);
-        papan[7][3] = new Menteri(0, 0, true);
-        papan[7][4] = new Raja(7, 4, true);
-        papan[7][5] = new Gajah(7, 5, true);
-        papan[7][6] = new Kuda(7, 6, true);
-        papan[7][7] = new Benteng(7, 7, true);
+        papan[7][0] = new Benteng(7, 0, "putih");
+        papan[7][1] = new Kuda(7, 1, "putih");
+        papan[7][2] = new Gajah(7, 2, "putih");
+        papan[7][3] = new Menteri(0, 0, "putih");
+        papan[7][4] = new Raja(7, 4, "putih");
+        papan[7][5] = new Gajah(7, 5, "putih");
+        papan[7][6] = new Kuda(7, 6, "putih");
+        papan[7][7] = new Benteng(7, 7, "putih");
 
         for (int i = 0; i < papan[0].length; i++) {
-            papan[6][i] = new Prajurit(6, i, true);
+            papan[6][i] = new Prajurit(6, i, "putih");
         }
     }
 
     private void mengisiPionHitam() {
-        papan[0][0] = new Benteng(0, 0, false);
-        papan[0][1] = new Kuda(0, 1, false);
-        papan[0][2] = new Gajah(0, 2, false);
-        papan[0][3] = new Menteri(0, 0, false);
-        papan[0][4] = new Raja(0, 4, false);
-        papan[0][5] = new Gajah(0, 5, false);
-        papan[0][6] = new Kuda(0, 6, false);
-        papan[0][7] = new Benteng(0, 7, false);
+        papan[0][0] = new Benteng(0, 0, "hitam");
+        papan[0][1] = new Kuda(0, 1, "hitam");
+        papan[0][2] = new Gajah(0, 2, "hitam");
+        papan[0][3] = new Menteri(0, 0, "hitam");
+        papan[0][4] = new Raja(0, 4, "hitam");
+        papan[0][5] = new Gajah(0, 5, "hitam");
+        papan[0][6] = new Kuda(0, 6, "hitam");
+        papan[0][7] = new Benteng(0, 7, "hitam");
 
         for (int i = 0; i < papan[0].length; i++) {
-            papan[1][i] = new Prajurit(1, i, false);
+            papan[1][i] = new Prajurit(1, i, "hitam");
         }
     }
 
@@ -76,6 +76,6 @@ public class Papan {
         papan[barisTujuan][kolomTujuan] = papan[baris][kolom];
         papan[barisTujuan][kolomTujuan].setBaris(barisTujuan);
         papan[barisTujuan][kolomTujuan].setKolom(kolomTujuan);
-        papan[baris][kolom] = new Kosong(baris, kolom, true);
+        papan[baris][kolom] = new Kosong(baris, kolom, "kosong");
     }
 }

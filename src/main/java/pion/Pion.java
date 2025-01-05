@@ -6,9 +6,9 @@ public abstract class Pion {
     private int baris;
     private int kolom;
     private String tampilan;
-    private boolean warna;
+    private String warna;
 
-    public Pion(int baris, int kolom, boolean warna) {
+    public Pion(int baris, int kolom, String warna) {
         this.baris = baris;
         this.kolom = kolom;
         this.warna = warna;
@@ -22,11 +22,11 @@ public abstract class Pion {
         this.kolom = kolom;
     }
 
-    public boolean isWarna() {
+    public String getWarna() {
         return warna;
     }
 
-    public void setWarna(boolean warna) {
+    public void setWarna(String warna) {
         this.warna = warna;
     }
 
