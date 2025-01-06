@@ -12,9 +12,10 @@ public class Kuda extends Pion{
         }
     }
 
-    public boolean validasi1(int baris, int kolom, int barisTujuan, int kolomTujuan, Papan papan) {
-        int selisihBaris = Math.abs(barisTujuan - baris); 
-        int selisihKolom = Math.abs(kolomTujuan - kolom);
+    public boolean validasi1(int barisTujuan, int kolomTujuan, Papan papan) {
+        int selisihBaris = Math.abs(barisTujuan - getBaris()); 
+        int selisihKolom = Math.abs(kolomTujuan - getKolom());
+
         if (selisihBaris == 1 && selisihKolom == 2 || selisihBaris == 2 && selisihKolom == 1) {
             return true;
         } else {

@@ -46,7 +46,27 @@ public abstract class Pion {
         this.tampilan = tampilan;
     }
     
-    public abstract boolean validasi1(int baris, int kolom, int barisTujuan, int kolomTujuan, Papan papan);
+    public boolean validasi(int barisTujuan, int kolomTujuan, Papan papan) {
+        if (validasi1(barisTujuan, kolomTujuan, papan) && validasi2(barisTujuan, kolomTujuan, papan) && validasi3(barisTujuan, kolomTujuan, papan)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public abstract boolean validasi1(int barisTujuan, int kolomTujuan, Papan papan);
+
+    public boolean validasi2(int barisTujuan, int kolomTujuan, Papan papan) {
+        if (!getWarna().equals(papan.getPion(barisTujuan, kolomTujuan).getWarna())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean validasi3(int barisTujuan, int kolomTujuan, Papan papan) {
+        return true;
+    }
 
     public void bergerak(Papan papan, int barisTujuan, int kolomTujuan) {
         papan.merubahPosisi(baris, kolom, barisTujuan, kolomTujuan);

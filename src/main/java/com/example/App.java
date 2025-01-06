@@ -49,9 +49,7 @@ public final class App {
                 int barisTujuan = baris(inputTujuan);
                 int kolomTujuan = kolom(inputTujuan);
 
-                System.out.println(baris + " " + kolom);
-                System.out.println(barisTujuan + " " + kolomTujuan);
-                if (papan.getPion(baris, kolom).validasi1(baris, kolom, barisTujuan, kolomTujuan, papan)) {
+                if (papan.getPion(baris, kolom).validasi(barisTujuan, kolomTujuan, papan)) {
                     papan.getPion(baris, kolom).bergerak(papan, barisTujuan, kolomTujuan);
                     break;
                 } else {
