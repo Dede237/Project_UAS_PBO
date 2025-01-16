@@ -26,11 +26,10 @@ public final class App {
         int baris;
         int kolom;
 
-
         while (true) {
-            while (true) {
-                papan.menampilkanPapan();
+            papan.menampilkanPapan();
 
+            while (true) {
                 System.out.print("Masukkan posisi awal: ");
                 String input = sc.nextLine();
                 baris = baris(input);
@@ -46,21 +45,27 @@ public final class App {
             while (true) {
                 System.out.print("Masukkan posisi tujuan: ");
                 String inputTujuan = sc.nextLine();
+
+                if (inputTujuan.equals("back")) {
+                    break;
+                }
+
                 int barisTujuan = baris(inputTujuan);
                 int kolomTujuan = kolom(inputTujuan);
 
                 if (papan.getPion(baris, kolom).validasi(barisTujuan, kolomTujuan, papan)) {
                     papan.getPion(baris, kolom).bergerak(papan, barisTujuan, kolomTujuan);
+
+                    if (giliran.equals("putih")) {
+                        giliran = "hitam";
+                    } else {
+                        giliran = "putih";
+                    }
+
                     break;
                 } else {
                     System.out.println("Posisi tidak valid!");
                 }
-            }
-            
-            if (giliran.equals("putih")) {
-                giliran = "hitam";
-            } else {
-                giliran = "putih";
             }
 
             if (!papan.mengecekRajaPutih()) {
@@ -71,8 +76,6 @@ public final class App {
                 break;
             }
         }
-        
+        sc.close();
     }
-
-    
 }
